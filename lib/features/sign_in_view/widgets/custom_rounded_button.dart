@@ -6,16 +6,18 @@ class CustomRoundedButton extends StatelessWidget {
   const CustomRoundedButton({
     super.key,
     required this.title,
+    this.onTap,
   });
   final String title;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     return Bounceable(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         alignment: Alignment.center,
-        width: Constant.mediaQuery.size.width,
+        width: Constants.mediaQuery.size.width,
         height: 55,
         decoration: BoxDecoration(
           color: Colors.white,
@@ -23,8 +25,8 @@ class CustomRoundedButton extends StatelessWidget {
         ),
         child: Text(
           title,
-          style: Constant.theme.textTheme.bodyMedium!.copyWith(
-            color: Constant.theme.primaryColor,
+          style: Constants.theme.textTheme.bodyMedium!.copyWith(
+            color: Constants.theme.primaryColor,
           ),
         ),
       ),

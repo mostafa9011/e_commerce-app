@@ -60,7 +60,13 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
     return TextFormField(
       controller: widget.controller,
       initialValue: widget.value,
-      validator: widget.onValidate,
+      validator: (value) {
+        if (value?.isEmpty ?? true) {
+          return 'Feild Required !';
+        } else {
+          return null;
+        }
+      },
       onChanged: widget.onChanged,
       onEditingComplete: widget.onEditingComplete,
       onFieldSubmitted: widget.onFieldSubmitted,
@@ -104,6 +110,9 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
           color: Colors.grey,
         ),
         counterText: "",
+        border: UnderlineInputBorder(
+          borderRadius: BorderRadius.circular(15),
+        ),
         focusedBorder: UnderlineInputBorder(
           borderRadius: BorderRadius.circular(15),
         ),
