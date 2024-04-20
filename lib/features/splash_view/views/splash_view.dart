@@ -27,7 +27,7 @@ class _SplashViewState extends State<SplashView> {
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/images/SplashScreen.png'),
-          fit: BoxFit.fill,
+          fit: BoxFit.cover,
         ),
       ),
     );
