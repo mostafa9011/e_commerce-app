@@ -1,7 +1,5 @@
-import 'dart:developer';
-
 import 'package:animate_do/animate_do.dart';
-import 'package:e_commerce_app/core/config/constats.dart';
+import 'package:e_commerce_app/core/config/constants.dart';
 import 'package:e_commerce_app/core/config/view_routes.dart';
 import 'package:e_commerce_app/core/extensions/padding_to_widget.dart';
 import 'package:e_commerce_app/core/widgets/custom_text_field.dart';
@@ -119,14 +117,13 @@ class _LoginViewState extends State<LoginView> {
                   ),
                   FadeInRight(
                     delay: const Duration(milliseconds: 1200),
-                    child: CustomRoundedButton(
+                    child: CustomButton(
                       onTap: () async {
                         if (formKey.currentState!.validate()) {
                           await loginCubit.login(
                             emailController.text,
                             passwordController.text,
                           );
-                          log('success');
                         }
                       },
                       title: 'Login',

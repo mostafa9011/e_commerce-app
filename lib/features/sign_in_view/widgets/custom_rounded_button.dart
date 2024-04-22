@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bounceable/flutter_bounceable.dart';
-import '../../../core/config/constats.dart';
+import '../../../core/config/constants.dart';
 
-class CustomRoundedButton extends StatelessWidget {
-  const CustomRoundedButton({
+class CustomButton extends StatelessWidget {
+  const CustomButton({
     super.key,
     required this.title,
     this.onTap,

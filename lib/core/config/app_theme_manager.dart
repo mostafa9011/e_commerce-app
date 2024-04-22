@@ -37,5 +37,11 @@ class AppThemeManager {
         color: Colors.white,
       ),
     ),
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+      type: BottomNavigationBarType.fixed,
+      backgroundColor: Color(0xFF004182),
+      showUnselectedLabels: false,
+      showSelectedLabels: false,
+    ),
   );
 }
