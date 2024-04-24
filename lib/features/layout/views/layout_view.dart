@@ -3,22 +3,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../manager/cubit.dart';
 import '../manager/states.dart';
 
-class LayoutView extends StatefulWidget {
+class LayoutView extends StatelessWidget {
   const LayoutView({super.key});
 
-  @override
-  State<LayoutView> createState() => _LayoutViewState();
-}
-
-class _LayoutViewState extends State<LayoutView> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<HomeCubit>(
       create: (context) => HomeCubit(),
-      child: BlocConsumer<HomeCubit, HomeStates>(
-        listener: (context, state) {
-          // if (state is CategorySuccessState) {}
-        },
+      child: BlocBuilder<HomeCubit, HomeStates>(
         builder: (context, state) {
           var cubit = HomeCubit.get(context);
           return Scaffold(

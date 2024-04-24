@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/config/constants.dart';
+import '../../../../core/config/constants.dart';
 
-class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+class FavoriteView extends StatelessWidget {
+  const FavoriteView({super.key});
 
   @override
   Widget build(BuildContext context) {
-   return Center(
+    return Center(
       child: Text(
-        'HomeView',
+        'FavoriteView',
         style: Constants.theme.textTheme.titleLarge?.copyWith(
           color: Colors.black,
         ),

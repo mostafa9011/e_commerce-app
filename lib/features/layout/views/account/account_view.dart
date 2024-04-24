@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../core/config/constants.dart';
+import '../../../../core/config/constants.dart';
 
 class AccountView extends StatelessWidget {
   const AccountView({super.key});

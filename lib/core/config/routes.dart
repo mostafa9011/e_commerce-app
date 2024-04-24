@@ -4,7 +4,7 @@ import 'package:e_commerce_app/features/sign_up_view/views/sign_up_view.dart';
 import 'package:e_commerce_app/features/splash_view/views/splash_view.dart';
 import 'package:flutter/material.dart';
 
-import '../../features/layout/pages/layout_view.dart';
+import '../../features/layout/views/layout_view.dart';
 
 class Routes {
   static Route<dynamic> onGenerate(RouteSettings settings) {

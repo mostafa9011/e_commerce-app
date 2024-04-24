@@ -19,6 +19,7 @@ class CustomTextFormField extends StatefulWidget {
   final TextInputAction? action;
   final FocusNode? focusNode;
   final Color? hintColor;
+  final Color? color;
 
   const CustomTextFormField({
     super.key,
@@ -45,6 +46,7 @@ class CustomTextFormField extends StatefulWidget {
     this.action,
     this.focusNode,
     this.hintColor = Colors.white,
+    this.color,
   });
 
   @override
@@ -88,6 +90,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       textInputAction: widget.action ?? TextInputAction.done,
       focusNode: widget.focusNode,
       decoration: InputDecoration(
+        contentPadding: EdgeInsets.zero,
         filled: true,
         fillColor: Colors.white,
         suffixIcon: widget.isPassword ?? false
@@ -107,17 +110,27 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         prefixIcon: widget.prefixIcon,
         hintText: widget.hint,
         hintStyle: theme.textTheme.bodyMedium!.copyWith(
-          color: Colors.grey,
+          color: widget.color ?? Colors.grey,
         ),
         counterText: "",
         border: UnderlineInputBorder(
           borderRadius: BorderRadius.circular(15),
+          borderSide: BorderSide(
+            color: theme.primaryColor,
+          ),
         ),
         focusedBorder: UnderlineInputBorder(
           borderRadius: BorderRadius.circular(15),
+          borderSide: BorderSide(
+            color: theme.primaryColor,
+          ),
         ),
         enabledBorder: UnderlineInputBorder(
           borderRadius: BorderRadius.circular(15),
+          borderSide: BorderSide(
+            color: theme.primaryColor,
+            width: 2,
+          ),
         ),
         errorStyle: const TextStyle(
           color: Colors.deepOrangeAccent,
